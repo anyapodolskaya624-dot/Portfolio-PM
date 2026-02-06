@@ -48,23 +48,35 @@
       margin-bottom: 8px;
     }
 
-    /* Содержание */
-    .nav-box {
-      margin-top: 32px;
-      padding: 24px;
+    /* Современное меню кнопками */
+    .nav-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .nav-card {
       background: var(--surface);
+      border: 1px solid var(--line);
+      padding: 20px;
       border-radius: 12px;
-      display: inline-block;
-    }
-    .nav-box a {
-      display: block;
-      color: var(--accent);
       text-decoration: none;
-      margin: 8px 0;
+      color: var(--text);
       font-weight: 500;
-      transition: 0.3s;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
-    .nav-box a:hover { opacity: 0.7; }
+
+    .nav-card:hover {
+      transform: scale(1.05);
+      border-color: var(--accent);
+      background: rgba(109, 242, 194, 0.05);
+      color: var(--accent);
+    }
 
     .block {
       background: var(--surface);
@@ -80,9 +92,9 @@
       display: block;
     }
 
-    /* Стиль для уменьшенной таблицы */
+    /* Компактные изображения */
     .img-small {
-      max-width: 600px !important;
+      max-width: 700px !important;
       margin-left: auto;
       margin-right: auto;
     }
@@ -104,7 +116,6 @@
       transform: translateY(0);
     }
 
-    /* Кнопка наверх */
     #backToTop {
       position: fixed;
       bottom: 30px;
@@ -146,15 +157,14 @@
 Ниже — реальные артефакты, которые я делала в проектах: планирование, процессы, роли, системы и аналитика.
   </p>
 
-  <div class="nav-box">
-    <b>Содержание:</b>
-    <a href="#planning">→ Планирование проекта</a>
-    <a href="#processes">→ Процессы и бизнес-логика</a>
-    <a href="#roles">→ Роли и ответственность</a>
-    <a href="#systems">→ ИТ-системы и реализация</a>
-    <a href="#tasks">→ Управление задачами</a>
-    <a href="#risks">→ Управление рисками</a>
-    <a href="#analytics">→ Аналитика и контроль</a>
+  <div class="nav-container">
+    <a href="#planning" class="nav-card">Планирование проекта</a>
+    <a href="#processes" class="nav-card">Процессы и бизнес-логика</a>
+    <a href="#roles" class="nav-card">Роли и ответственность</a>
+    <a href="#systems" class="nav-card">ИТ-системы и реализация</a>
+    <a href="#tasks" class="nav-card">Управление задачами</a>
+    <a href="#risks" class="nav-card">Управление рисками</a>
+    <a href="#analytics" class="nav-card">Аналитика и контроль</a>
   </div>
 </section>
 
@@ -248,7 +258,7 @@ BPMN-схема процесса оценки решений для компан
     <b class="accent">Схема персонализации профилей пользователей</b>
     <p>
 Я подготовила наглядную модель для руководства, которая позволяет быстро оценить текущие ограничения, риски и эффекты от изменений ролей и прав доступа. 
-Схема использовалась как инструмент для принятия управленческих решений и согласованного внедрения улучшений ИТ-системы.
+Схема использовалась как инструмент для принятия управленческих решений.
     </p>
     <img src="change-governance-problem.png">
     <img src="change-governance-solution.png">
@@ -288,7 +298,7 @@ BPMN-схема процесса оценки решений для компан
 Я составила реестр рисков проекта с оценкой вероятности и влияния.
 Это позволило заранее подготовить меры реагирования.
     </p>
-    <img src="risks.png">
+    <img src="risks.png" class="img-small">
   </div>
 </section>
 
@@ -313,7 +323,6 @@ BPMN-схема процесса оценки решений для компан
 </footer>
 
 <script>
-  // Анимация появления
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -324,7 +333,6 @@ BPMN-схема процесса оценки решений для компан
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Кнопка наверх
   const btn = document.getElementById('backToTop');
   window.onscroll = function() {
     if (window.pageYOffset > 300) {
