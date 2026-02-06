@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Manager — Подольская Анна Александровна</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --surface: #141826;
+      --text: #e8e9ee;
+      --muted: #9aa0b3;
+      --accent: #6df2c2;
+      --line: #22283a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 96px 10%;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 { font-size: 48px; margin: 0 0 16px; }
+    h2 { font-size: 32px; margin-bottom: 24px; }
+
+    p {
+      max-width: 900px;
+      color: var(--muted);
+      margin: 0 0 16px;
+      white-space: pre-line;
+    }
+
+    .accent { color: var(--accent); }
+
+    .block {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 32px;
+      margin-top: 40px;
+    }
+
+    .block img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 24px;
+    }
+
+    .block a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      padding: 64px 10%;
+      text-align: center;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="reveal">
+  <h1>Project Manager<br><span class="accent">Подольская Анна Александровна</span></h1>
+  <p>
+Я проектный менеджер, который умеет брать разрозненные требования, людей и ограничения
+и превращать это в управляемый проект.
+Ниже — реальные артефакты, которые я делала в проектах: планирование, процессы, роли, системы и аналитика.
+  </p>
+</section>
+
+<section class="reveal">
+  <h2>Планирование проекта: сроки и логика</h2>
+
+  <div class="block">
+    <p><b>Диаграмма Ганта</b></p>
+    <p>
+Проект INTERCHARM.
+Я построила детальный план проекта в Microsoft Project: этапы, зависимости, контрольные точки и критический путь.
+Это позволило управлять сроками, аргументированно обсуждать изменения с заказчиком и заранее видеть риски срыва сроков.
+Умею работать с крупными планами, зависимостями и реальными сроками, а не абстрактными датами.
+    </p>
+    <img src="img/gantt-intercharm.png">
+  </div>
+
+  <div class="block">
+    <p>
+<b>Сетевой график</b>
+Я использовала сетевой график для проверки логики проекта и поиска критического пути.
+Это помогло выявить работы, которые напрямую влияют на срок завершения, и сфокусировать внимание команды именно на них.
+Думаю не только календарём, но и логикой выполнения работ.
+    </p>
+    <img src="img/network-intercharm.png">
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Процессы и бизнес-логика</h2>
+
+  <div class="block">
+    <p><b>IDEF0</b></p>
+    <p>
+IDEF0 — моделирование бизнес-процессов компании Л’Этуаль.
+Я самостоятельно описала бизнес-процессы в нотации IDEF0: зафиксировала входы, выходы, управляющие воздействия и ресурсы.
+Это стало основой для обсуждения с бизнесом и ИТ и позволило синхронизировать ожидания сторон.
+Умею погружаться в бизнес-процессы и говорить с бизнесом на понятном ему языке.
+    </p>
+    <img src="img/idef0-letual-1.png">
+    <img src="img/idef0-letual-2.png">
+  </div>
+
+  <div class="block">
+    <p>
+Я спроектировала BPMN-схему процесса выявления и обработки некорректных данных.
+Процесс стал прозрачным: понятны роли, точки контроля и сценарии отклонений.
+Могу детально разложить сложный процесс и подготовить его к автоматизации.
+    </p>
+    <img src="img/bpmn-errors.png">
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Роли и ответственность</h2>
+
+  <div class="block">
+    <p>
+Я разработала матрицу RACI для проекта, чтобы зафиксировать зоны ответственности участников.
+Это снизило количество конфликтов и ситуаций, когда задачи «зависали» без владельца.
+Умею наводить порядок в ролях и ответственности, даже в сложных командах.
+    </p>
+    <img src="img/raci.png">
+  </div>
+
+  <div class="block">
+    <p>
+Я собрала и структурировала ключевую информацию по проекту в единой таблице.
+Команда и стейкхолдеры получили единый источник актуальных данных.
+Забочусь о прозрачности и управляемости, а не о ручном контроле в чатах.
+    </p>
+    <img src="img/info-table.png">
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>ИТ-системы и реализация</h2>
+
+  <div class="block">
+    <p>
+Я участвовала в администрировании 1С: пользователи, права доступа, базовые настройки.
+Это позволило учитывать реальные технические ограничения системы при принятии проектных решений.
+Не боюсь технической части и понимаю, как проект живёт внутри системы.
+    </p>
+    <img src="img/1c-admin.png">
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Управление задачами и изменениями</h2>
+
+  <div class="block">
+    <p>
+Кейс «было / стало».
+Я инициировала и реализовала переход от неструктурированного Word-файла к ведению задач в Jira.
+В результате появились статусы, приоритеты, история изменений и прозрачность выполнения.
+Умею внедрять изменения и доводить их до реального использования.
+    </p>
+    <img src="img/word-to-jira.png">
+  </div>
+
+  <div class="block">
+    <p>
+Структурная декомпозиция работ в Jira: Я выстроила структуру проекта в Jira: эпики, задачи, подзадачи и связи между ними.
+Проект стал управляемым и прозрачным как для команды, так и для заказчика.
+Умею превращать цели и требования в исполнимый бэклог.
+    </p>
+    <img src="img/jira-structure-1.png">
+    <img src="img/jira-structure-1.png">
+    <img src="img/jira-structure-2.png">
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Управление рисками</h2>
+
+  <div class="block">
+    <p>
+Реестр рисков проекта: Я составила реестр рисков проекта с оценкой вероятности и влияния.
+Это позволило заранее подготовить меры реагирования и избежать критичных последствий.
+Думаю на шаг вперёд и работаю с неопределённостью.
+    </p>
+    <img src="img/risks.png">
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Аналитика и контроль</h2>
+
+  <div class="block">
+    <p>
+Дашборд в DataLens по учёту рабочего времени сотрудников —
+Я спроектировала дашборд для анализа рабочего времени сотрудников.
+Руководство получило наглядную картину загрузки и фактических трудозатрат.
+Умею превращать данные в управленческие решения.
+    </p>
+    <img src="img/datalens-dashboard.png">
+    <p>
+      <a href="https://datalens.ru/zik9c23e32sck" target="_blank">Открыть дашборд →</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  Project Manager · Подольская Анна Александровна
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
